@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+  northwind:
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=Password1#
+      - MSSQL_PID=Developer
+    container_name: northwindDB
+    ports:
+      - "1450:1433"
+    image: northwind:latest
+    build:
+      context: .
