@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+  onetserve:
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=Password1#
+      - MSSQL_PID=Developer
+    container_name: sqlserver
+    ports:
+      - "1433:1433"
+    image: onet:latest
+    build:
+      context: .
